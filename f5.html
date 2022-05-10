@@ -1,0 +1,64 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            background-image: url(d4.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    
+    </style>
+    <script>
+
+    </script>
+</head>
+<body id="body">
+    <script>
+        function create(){
+
+            let table = document.createElement('table');
+            let tbody = document.createElement('tbody');
+            let hr = document.createElement('hr');
+
+            table.appendChild(tbody);
+
+            document.getElementById('body').appendChild(table);
+            let row_0 = document.createElement('tr');
+
+            let row_1 = document.createElement('tr');
+            let row_1_data_1 = document.createElement('td');
+            row_1_data_1.innerHTML = "skill";
+            let row_1_data_2 = document.createElement('td');
+            row_1_data_2.innerHTML = "<select><Option>c</option><option>java</option><option>python</option><option>HTML</option><option>CSS</option><option>JS</option><option>PHP</option></select>";
+    
+
+            row_1.appendChild(row_1_data_1);
+            row_1.appendChild(row_1_data_2);
+            tbody.appendChild(row_1);
+
+            // Creating and adding data to second row of the table
+            let row_2 = document.createElement('tr');
+            let row_2_data_1 = document.createElement('td');
+            row_2_data_1.innerHTML = "level";
+            let row_2_data_2 = document.createElement('td');
+            row_2_data_2.innerHTML = "<select><Option>Advanced</option><option>Intermediate</option><option>Basic</option></select>";
+            
+
+            row_2.appendChild(row_2_data_1);
+            row_2.appendChild(row_2_data_2);
+            tbody.appendChild(row_2);
+
+
+            // Creating and adding data to third row of the table
+            
+
+            document.getElementById('body').appendChild(hr);
+
+        }
+    </script>
+    <h1>SKILL INFORMATION</h1>
+    <p>ADD YOUR SKILLS HERE</p>
+    <input type="button" value="add Skills" onclick="create()">
+    <a href="f6.html"><input type="button" value="next" name="next"></a>
+</body>
+</html>

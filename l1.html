@@ -1,0 +1,95 @@
+<html>
+<head>
+<title>student registration form</title>
+<style type="text/css">
+    body{
+        background-image: url(d4.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    form{    
+        text-align: center;    
+        font-family: Calibri;    
+        font-size: 20px;    
+        border: 3px solid black;    
+        width: 900px; 
+        height: 500px;   
+        margin: 20px auto;    
+    } 
+    input[type="submit"], input[type="reset"]{    
+        width: 100px;    
+        height: 35px;    
+        position: relative;left: 300px;
+        
+    } 
+    input[type="submit"]:hover {
+        background: blue; color: red;
+        }
+    input[type="reset"]:hover {
+        background: blue; color: red;
+        }       
+</style>
+<script>
+    function regist_form(){
+        var first_name=document.forms["reg_form"]["fname"];
+        var middle_name=document.forms["reg_form"]["mname"];
+        var last_name=document.forms["reg_form"]["lname"];
+        var father_name=document.forms["reg_form"]["father name"];
+        var mother_name=document.forms["reg_form"]["mother name"];
+        document.write("name :")
+        document.write(first_name.value);
+        document.write(middle_name.value);
+        document.write(last_name.value);
+    }
+</script>
+</head>
+<body>
+<form method="post" action="/submit" name="reg_form"  onsubmit="regist_form()">
+<h1>GENERAL INFO</h1>    
+<table> 
+    <tr>
+        <td>FIRST NAME:</td>
+        <td><input type="text" name="fname" required></td>
+        <td>MIDDLE NAME</td>
+        <td><input type="text" name="mname" required></td>
+        <td>LAST NAME:</td>
+        <td><input type="text" name="lname" required></td>
+    </tr> 
+    <tr>
+        <td>FATHER NAME:</td>
+        <td><input type="text" placeholder="father name" name="faname"required></td>
+
+    </tr> 
+    <tr>
+        <td>MOTHER NAME:</td>
+        <td><input type="text" placeholder="mother name" name="moname"required></td>
+    </tr>
+    <tr>
+        <td>GENDER:</td>
+        <td><input type="radio" name="g">male</td>
+        <td><input type="radio" name="g">female</td>       
+    </tr>
+    <tr>
+        <td>DOB</td>
+        <td><input type="date" name="dob" required></td>
+    </tr>
+    <tr>
+        <td>E-mail:</td>
+        <td><input type="text" placeholder="Enter Email" name="email" required></td>
+    </tr>
+    <tr>
+        <td>PH.NO</td>
+        <td><input type="number" placeholder="Enter phno" name="phone" required></td>
+    </tr>
+    <tr>
+        <td>ADDRESS :</td>
+        <td><textarea></textarea></td>
+    </tr>
+    <tr>
+        <td><input type="reset" value="reset"></td>
+        <td><input type="submit" value="submit" name="submit"></td>
+    </tr>
+</table> 
+</form>
+</body>
+</html>

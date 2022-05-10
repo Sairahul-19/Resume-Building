@@ -1,0 +1,88 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            background-image: url(d4.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    
+    </style>
+    <script>
+
+    </script>
+</head>
+<body id="body">
+    <script>
+        function create(){
+            let table = document.createElement('table');
+            let tbody = document.createElement('tbody');
+            let hr = document.createElement('hr');
+
+            table.appendChild(tbody);
+
+            document.getElementById('body').appendChild(table);
+            let row_0 = document.createElement('tr');
+
+            let row_1 = document.createElement('tr');
+            let row_1_data_1 = document.createElement('td');
+            row_1_data_1.innerHTML = "institute";
+            let row_1_data_2 = document.createElement('td');
+            row_1_data_2.innerHTML = "<input type=\"text\">";
+    
+
+            row_1.appendChild(row_1_data_1);
+            row_1.appendChild(row_1_data_2);
+            tbody.appendChild(row_1);
+
+            // Creating and adding data to second row of the table
+            let row_2 = document.createElement('tr');
+            let row_2_data_1 = document.createElement('td');
+            row_2_data_1.innerHTML = "project";
+            let row_2_data_2 = document.createElement('td');
+            row_2_data_2.innerHTML = "<input type=\"text\">";
+            
+
+            row_2.appendChild(row_2_data_1);
+            row_2.appendChild(row_2_data_2);
+            tbody.appendChild(row_2);
+
+
+            // Creating and adding data to third row of the table
+            let row_3 = document.createElement('tr');
+            let row_3_data_1 = document.createElement('td');
+            row_3_data_1.innerHTML = "period";
+            row_3.appendChild(row_3_data_1);
+            tbody.appendChild(row_3);
+
+            let row_4 = document.createElement('tr')
+            let row_4_data_1 = document.createElement('td');
+            row_4_data_1.innerHTML = "From";
+            let row_4_data_2 = document.createElement('td');
+            row_4_data_2.innerHTML = "<input type=\"date\">";
+
+          
+            row_4.appendChild(row_4_data_1);
+            row_4.appendChild(row_4_data_2);
+            tbody.appendChild(row_4);
+
+            let row_5 = document.createElement('tr')
+            let row_5_data_1 = document.createElement('td');
+            row_5_data_1.innerHTML = "TO";
+            let row_5_data_2 = document.createElement('td');
+            row_5_data_2.innerHTML = "<input type=\"date\">";
+
+          
+            row_5.appendChild(row_5_data_1);
+            row_5.appendChild(row_5_data_2);
+            tbody.appendChild(row_5);
+
+            document.getElementById('body').appendChild(hr);
+
+        }
+    </script>
+    <h1>TRAINING INFORMATION</h1>
+    <input type="button" value="add another training" onclick="create()">
+    <a href="f5.html"><input type="button" value="next" name="next"></a>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+    <style type="text/css">
+        body{
+            background-image: url(d4.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+    
+    </style>
+    <script>
+
+    </script>
+</head>
+<body id="body">
+    <script>
+        var i=1;
+        function create(){    
+            let table = document.createElement('table');
+            let tbody = document.createElement('tbody');
+            let hr = document.createElement('hr');
+
+            table.appendChild(tbody);
+
+            document.getElementById('body').appendChild(table);
+            let row_0 = document.createElement('tr');
+
+            let row_1 = document.createElement('tr');
+            let row_1_data_1 = document.createElement('td');
+            row_1_data_1.innerHTML = i;
+            let row_1_data_2 = document.createElement('td');
+            row_1_data_2.innerHTML = "<textarea></textarea>";
+    
+
+            row_1.appendChild(row_1_data_1);
+            row_1.appendChild(row_1_data_2);
+            tbody.appendChild(row_1);            
+
+            document.getElementById('body').appendChild(hr);
+            i++;
+
+        }
+    </script>
+    <h1>GOAL</h1>
+    <textarea></textarea>
+    <h1>ACHIEVMENTS</h1>
+    <input type="button" value="add ACHIEVMENTS" onclick="create()">
+    <input type="submit" value="submit" name="next">
+</body>
+</html>

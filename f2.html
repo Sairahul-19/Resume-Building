@@ -1,0 +1,125 @@
+<html>
+<head>
+<title>student registration form</title>
+<style type="text/css">
+    body{
+        background-image: url(d4.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    form{    
+        text-align: center;    
+        font-family: Calibri;    
+        font-size: 20px;    
+        border: 3px solid black;    
+        width: 900px; 
+        height: 500px;   
+        margin: 20px auto; 
+           
+    } 
+    input[type="submit"]{    
+        width: 100px;    
+        height: 35px;    
+        position: relative;left: 350px;  
+    } 
+    input[type="reset"] {    
+        width: 100px;    
+        height: 35px;    
+        position: relative;left: 200px}
+    input[type="button"]{    
+        width: 100px;    
+        height: 35px;    
+        position: relative;left: 50px}    
+
+    input[type="submit"]:hover {
+        background: blue; color: red;
+        }
+    input[type="reset"]:hover {
+        background: blue; color: red;
+        }  
+    input[type="button"]:hover {
+        background: blue; color: red;
+        }           
+</style>
+<script>
+    function regist_form(){
+        var first_name=document.forms["reg_form"]["fname"];
+        var middle_name=document.forms["reg_form"]["mname"];
+        var last_name=document.forms["reg_form"]["lname"];
+        var father_name=document.forms["reg_form"]["faname"];
+        var mother_name=document.forms["reg_form"]["moname"];
+        var gender=document.forms["reg_form"]["g"];
+        var dob=document.forms["reg_form"]["dob"];
+        var email=document.forms["reg_form"]["email"];
+        var phone=document.forms["reg_form"]["phone"];
+
+        document.write("name :")
+        document.write(first_name.value,"&nbsp;");
+        document.write(middle_name.value,"&nbsp;");
+        document.write(last_name.value,"&nbsp;");
+        document.write("<br> father's name :");
+        document.write(father_name.value);
+        document.write("<br> mother's name :");
+        document.write(mother_name.value);
+        document.write("<br> gender :");
+        document.write(gender.value);
+        document.write("<br> date of birth :");
+        document.write(dob.value);
+        document.write("<br>E-mail :");
+        document.write(email.value);
+        document.write("<br>ph.no :");
+        document.write(phone.value);
+    }
+</script>
+</head>
+<body>
+<form method="post" action="/submit" name="reg_form"  onsubmit="regist_form()">
+<h1>GENERAL INFO</h1>    
+<table> 
+    <tr>
+        <td>FIRST NAME:</td>
+        <td><input type="text" name="fname" required></td>
+        <td>MIDDLE NAME</td>
+        <td><input type="text" name="mname" required></td>
+        <td>LAST NAME:</td>
+        <td><input type="text" name="lname" required></td>
+    </tr> 
+    <tr>
+        <td>FATHER NAME:</td>
+        <td><input type="text" placeholder="father name" name="faname"required></td>
+
+    </tr> 
+    <tr>
+        <td>MOTHER NAME:</td>
+        <td><input type="text" placeholder="mother name" name="moname"required></td>
+    </tr>
+    <tr>
+        <td>GENDER:</td>
+        <td><input type="radio" name="g">male</td>
+        <td><input type="radio" name="g">female</td>       
+    </tr>
+    <tr>
+        <td>DOB</td>
+        <td><input type="date" name="dob" required></td>
+    </tr>
+    <tr>
+        <td>E-mail:</td>
+        <td><input type="text" placeholder="Enter Email" name="email" required></td>
+    </tr>
+    <tr>
+        <td>PH.NO</td>
+        <td><input type="number" placeholder="Enter phno" name="phone" required></td>
+    </tr>
+    <tr>
+        <td>ADDRESS :</td>
+        <td><textarea></textarea></td>
+    </tr>
+    <tr>
+        <td><input type="reset" value="reset"></td>
+        <td><input type="submit" value="submit" name="submit"></td>
+        <td><a href="f3.html"><input type="button" value="next" name="next"></a></td>
+    </tr>
+</table> 
+</form>
+</body>
+</html>
